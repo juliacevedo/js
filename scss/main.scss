@@ -2,9 +2,9 @@
 @import 'general/reset';
 
 /* GRIDS */
-@import 'grid/grid';
-@import 'grid/mixins';
 @import 'grid/variables';
+@import 'grid/mixins';
+@import 'grid/grid';
 
 /* GENERAL */
 @import 'general/calculator';
