@@ -546,11 +546,11 @@ iframe {
   height: auto; }
 
 .button1 {
-  padding-top: 0%;
-  padding-bottom: 0%;
+  padding-top: 1%;
+  padding-bottom: 1%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10%;
+  margin-bottom: 2%;
   align-self: center;
   align-items: center;
   display: flex;
