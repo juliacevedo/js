@@ -1,0 +1,117 @@
+@import '../general/style';
+
+header{
+	max-height: 40px;
+	min-height: 40px;
+	background-color: rgba(43, 43, 43, 1);
+	display: flex;
+	flex-direction: row;
+	vertical-align: middle;
+}
+#header{
+	display: flex;
+	flex-direction: row;
+    position: absolute;
+}
+nav a{
+	text-decoration: none;
+	color: aliceblue;
+	transition: all ease 0.25s;
+		&:hover{
+			color: rgba(255,255,255,1);
+			border-bottom-color:aliceblue;
+		}
+}
+#menu_on{
+	display: inline-block;
+	width:30px;
+	height: 20px;
+	position: relative;
+	z-index: 2;
+}
+
+@include respond-to('inter'){
+	header{
+		background-color: rgba(43, 43, 43, 1);
+	  	min-height: 40px;;
+	  	max-height: 40px;
+		  z-index: 999;
+  	}
+	body.disabledScroll{
+		overflow: hidden;
+	}
+ 	nav{
+	  position: fixed;
+	  top: 0;
+	  bottom: 0;
+	  left:-300px; 
+	  width: 300px;
+	  z-index: 1;
+	  padding-top: 50px;
+	  background: rgba(255,255,255,0.2);
+	  opacity: 0;
+	  transition: all 0.75s ease;
+	  font-size: 1.2em;
+	  color: aliceblue;
+	  overflow-y: auto;
+		a{
+		display:block;
+		text-decoration: none;
+		padding: 10px;
+		color: aliceblue;
+		border-bottom: 1px solid rgba(255,255,255,0.2);
+		transition: all ease 0.25s;
+	 		 &:hover{
+				cursor: pointer;
+		  		color: rgba(255,255,255,1);
+		  		border-bottom-color:aliceblue;
+	 		 }
+		}
+  	}
+	#menu_label{
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	font-weight: bold;
+	text-align: center;
+	user-select: none;
+  	}
+ 	#LOGO{
+	width: 30px;
+	height: 30px;
+	margin: 15%;
+
+	position: relative;
+  	}
+  	.visible_menu {
+		nav{
+			left: 0;
+			opacity: 1;
+		}
+		&#content{
+			cursor: pointer;
+			transform: translateX(260px);
+  		}
+	}
+  	ul{
+		margin-top:0;
+		padding: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+  	}
+  	li {
+		display: block;
+		background: none;
+		margin: 0;
+		padding: 10px;
+		list-style: none;
+		font-family: 'Hind', sans-serif;
+	    	color: aliceblue;
+		&:hover {
+			cursor: pointer;
+			filter: brightness(110%);
+			font-family: 'Hind', sans-serif;
+		}
+  	}
+}
