@@ -66,14 +66,6 @@ iframe {
 $max-img-width: 400px;
 $min-img-width: 100px;
 
-.gallery {
-	img {
-		max-width: $max-img-width;
-		min-width: $min-img-width;
-		height: auto;
-		margin:1%;
-	}
-}
 
 @include respond-to('med'){
 	.mobile{
