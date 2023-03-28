@@ -8,47 +8,53 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header>
-        <a href="#" id="menu_on"></a>
-	    <nav>	
-		    <ul>
-			    <li><a href="#">Home</a></li>
-		        <li><a href="#">Servicios</a></li>
-		        <li><a href="#">Blog</a></li>
-		        <li><a href="#">Contacto</a></li>
-		    </ul>
-	    </nav>
-    </header>
-    <div id="app" class="categories">
-        <section class="category-section"></section>
-    </div>  
-    <div class="calculator">
-        <div class="screen" id="screen"></div>
-            <ul id="buttons" class="buttons">
-                <li><a href="#" data-key="clear">C</a></li>
-                <li><a href="#" data-key="-">-</a></li>
-                <li><a href="#" data-key="/">/</a></li>
-                <li><a href="#" data-key="*">x</a></li>    
-                <li><a href="#" data-key="7">7</a></li>
-                <li><a href="#" data-key="8">8</a></li>
-                <li><a href="#" data-key="9">9</a></li>
-                <li><a href="#" data-key="-">-</a></li>
-                <li><a href="#" data-key="4">4</a></li>
-                <li><a href="#" data-key="5">5</a></li>
-                <li><a href="#" data-key="6">6</a></li>
-                <li><a href="#" data-key="+">+</a></li>
-                <li><a href="#" data-key="1">1</a></li>
-                <li><a href="#" data-key="2">2</a></li>
-                <li><a href="#" data-key="3">3</a></li>
-                <li><a href="#" data-key="equal" class="equal tall">=</a></li>
-                <li><a href="#" data-key="0" class="wide shift">0</a></li>
-                <li><a href="#" data-key="." class="shift">.</a></li>
+    <header id="#header" class="row-header">
+        <a href="#" id="menu_on">
+            <label for="menu" id><img src="./media/bitmap.png" id="LOGO"></label>
+        </a>
+        <nav>	
+            <ul>
+                <li type="button" class="btn btn-basic"><a href="index.html">HOME</a></li>
+                <li type="button" class="btn btn-basic"><a href="pages/about.html">ABOUT HYPNOS</a></li>
+                <li type="button" class="btn btn-basic"><a href="pages/gallery.html">GALLERY</a></li>
+                <li type="button" class="btn btn-basic"><a href="pages/contact.html">REACH US</a></li>
+                <li type="button" class="btn btn-basic"><a href="pages/products.html">PRODUCTS</a></li>
             </ul>
+        </nav>
+    </header>
+    <section class="container-fluid column-mb row-md">
+        <div id="app" class="categories col-xs-12 col-sm-12 col-md-5 col-lg-5">
+            <section class="category-section"></section>
+        </div>  
+        <div class="calculator col-xs-12 col-sm-12 col-md-5 col-lg-5">
+            <div class="screen" id="screen"></div>
+                <ul id="buttons" class="buttons">
+                    <li><a href="#" data-key="clear">C</a></li>
+                    <li><a href="#" data-key="-">-</a></li>
+                    <li><a href="#" data-key="/">/</a></li>
+                    <li><a href="#" data-key="*">x</a></li>    
+                    <li><a href="#" data-key="7">7</a></li>
+                    <li><a href="#" data-key="8">8</a></li>
+                    <li><a href="#" data-key="9">9</a></li>
+                    <li><a href="#" data-key="-">-</a></li>
+                    <li><a href="#" data-key="4">4</a></li>
+                    <li><a href="#" data-key="5">5</a></li>
+                    <li><a href="#" data-key="6">6</a></li>
+                    <li><a href="#" data-key="+">+</a></li>
+                    <li><a href="#" data-key="1">1</a></li>
+                    <li><a href="#" data-key="2">2</a></li>
+                    <li><a href="#" data-key="3">3</a></li>
+                    <li><a href="#" data-key="equal" class="equal tall">=</a></li>
+                    <li><a href="#" data-key="0" class="wide shift">0</a></li>
+                    <li><a href="#" data-key="." class="shift">.</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="buttons">
-        <button id = "parrafo" class="button1"></button>
-    </div> 
+        <div class="buttons">
+            <button id = "parrafo" class="button1"></button>
+        </div> 
+    </section>
     <script type="text/javascript" src="js/inicio.js"></script>
+    
 </body>
 </html>

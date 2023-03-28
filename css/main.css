@@ -1,6 +1,7 @@
 /* RESET */
 /* RESET*/
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Hind&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Hind&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -451,6 +452,121 @@ table {
 
 .shift {
   margin-top: -78px; }
+
+h1 {
+  font-family: 'EB Garamond', serif;
+  color: aliceblue;
+  font: 700;
+  font-size: xx-large; }
+
+h3 {
+  font-weight: bold;
+  font-size: x-large;
+  margin-top: 1%;
+  color: aliceblue; }
+
+h4 {
+  font-weight: normal;
+  font-size: large;
+  color: aliceblue; }
+
+h5 {
+  font-weight: normal;
+  color: white; }
+  h5:hover {
+    color: #094bff; }
+
+h6 {
+  font-family: 'EB Garamond', serif;
+  color: aliceblue; }
+
+.container-fluid {
+  width: 100%; }
+
+.container-90 {
+  width: 90%; }
+
+.container-901 {
+  width: 90%;
+  display: flex;
+  align-content: center;
+  align-self: center;
+  -ms-flex-align: center; }
+
+.row {
+  display: table;
+  content: ""; }
+
+.row-header {
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle; }
+
+.row-md {
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+  justify-content: space-around; }
+
+.column-md {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; }
+
+.column-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.margin-one {
+  margin: 1.5%;
+  color: aliceblue; }
+
+.margin-two {
+  margin: 3%;
+  margin-top: 15%; }
+
+.margin-bottom {
+  margin-bottom: 8%; }
+
+div span {
+  margin-top: 5%;
+  margin-bottom: 2%; }
+
+span {
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: space-around; }
+
+iframe {
+  width: 90%;
+  height: auto; }
+
+.gallery img {
+  max-width: 400px;
+  min-width: 100px;
+  height: auto;
+  margin: 1%; }
+
+@media (max-width: (max-width: 820px)) {
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+  .row-mb {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around; }
+  .column-mb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; } }
 
 /* LAYOUT */
 header {

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Hind&display=swap');
+
+h1{
+	font-family: 'EB Garamond', serif;
+		color: aliceblue;
+		font: 700;
+		font-size: xx-large;
+}
+h3{
+	font-weight: bold;
+	font-size: x-large;
+	margin-top: 1%;
+	color: aliceblue;
+}
+h4{
+	font-weight:normal;
+	font-size: large;
+	color: aliceblue;
+}
+h5{
+	font-weight:normal;
+		color: rgb(255, 255, 255);
+	&:hover{
+		color: rgb(9, 75, 255);}
+}
+h6{
+	font-family: 'EB Garamond', serif;
+		color: aliceblue;
+}
+
+
