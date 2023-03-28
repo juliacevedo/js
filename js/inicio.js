@@ -5,6 +5,7 @@ let div = document.getElementById ("app")
 div.innerHTML= `<h1>Welcome to a silly site, ${urname}!</h1>`
 document.body.appendChild(div)
 
+//hamburguermenu?
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('menu_on').addEventListener('click', ()=>{
         var elementos = document.querySelectorAll('body'); 
@@ -35,16 +36,6 @@ UGH ()
 
 function Respuestaclick (){  
     parrafo.innerHTML = "<h3>Thank You...</h3>" 
-    parrafo.addEventListener("click", Respuestaclick2)
-}
-
-function Respuestaclick2 (){  
-    parrafo.innerHTML = "<h3>You are very welcome!</h3>" 
-    parrafo.addEventListener("click", Respuestaclick3)
-}
-
-function Respuestaclick3() {
-    Swal.fire('Very welcome!!!!:))')
 }
 
 // program to check if the number is even or odd
