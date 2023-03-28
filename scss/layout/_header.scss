@@ -1,9 +1,7 @@
-@import '../general/style';
-
 header{
 	max-height: 40px;
 	min-height: 40px;
-	background-color: rgba(43, 43, 43, 1);
+	background-color: rgb(255, 176, 176);
 	display: flex;
 	flex-direction: row;
 	vertical-align: middle;
@@ -32,7 +30,7 @@ nav a{
 
 @include respond-to('inter'){
 	header{
-		background-color: rgba(43, 43, 43, 1);
+		background-color: rgb(255, 176, 176);
 	  	min-height: 40px;;
 	  	max-height: 40px;
 		  z-index: 999;
@@ -48,7 +46,7 @@ nav a{
 	  width: 300px;
 	  z-index: 1;
 	  padding-top: 50px;
-	  background: rgba(255,255,255,0.2);
+	  background: rgb(255, 176, 176);
 	  opacity: 0;
 	  transition: all 0.75s ease;
 	  font-size: 1.2em;
@@ -59,7 +57,7 @@ nav a{
 		text-decoration: none;
 		padding: 10px;
 		color: aliceblue;
-		border-bottom: 1px solid rgba(255,255,255,0.2);
+		border-bottom: 1px solid rgb(255, 176, 176);
 		transition: all ease 0.25s;
 	 		 &:hover{
 				cursor: pointer;

@@ -5,6 +5,14 @@ let div = document.getElementById ("app")
 div.innerHTML= `<h1>Welcome to a silly site, ${urname}!</h1>`
 document.body.appendChild(div)
 
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById('menu_on').addEventListener('click', ()=>{
+        var elementos = document.querySelectorAll('body'); 
+        elementos.forEach(function(e) {
+           e.classList.toggle('visible_menu')
+    })})
+});
+
 //numbers and calculations
 let a = Number
 let b = Number
