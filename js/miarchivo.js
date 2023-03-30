@@ -11,9 +11,13 @@ if (urname !="") {
 //Asking for more data & firecting to console so they can see their results
 function prompts2(){
     let pay = Number(prompt("How much money do you have?"));
-    let waste = Number(prompt("How much of that do you use? I'm asking for numbers..."));
-    if ((pay !="") || ((pay = Number) && ((waste !="") || ((waste = Number))))){
-        alert("Neat! Do me a favor and go to Ctrl+Shift+I or go to the developer tools and then direct yourself to the console there. We already have data waiting for you!")
+    if ((pay !="") && ((pay = Number))){
+        let waste = Number(prompt("How much of that do you use? I'm asking for numbers..."));
+        if ((waste !="") && ((waste = Number))){
+            alert("Neat! Do me a favor and go to Ctrl+Shift+I or go to the developer tools and then direct yourself to the console there. We already have data waiting for you!")
+        } else {
+            alert("ERROR: The data given is not valid. Recharge the page and try again. We were asking for a number.")
+        }  
     } else {
         alert("ERROR: The data given is not valid. Recharge the page and try again. We were asking for a number.")
     }
