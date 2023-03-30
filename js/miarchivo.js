@@ -1,19 +1,33 @@
 let urname = prompt("What's your name?") 
 
-//1st inner interaction
-let div = document.getElementById ("app")
-div.innerHTML= `<h1>Welcome to a silly site, ${urname}!</h1>`
-document.body.appendChild(div)
+if (urname !="") {
+    prompts2();
+    inner1();
+    consolefirst();
+} else {
+    alert("ERROR: The name given is not valid. Recharge the page and try again.")
+}
 
 //Asking for more data & firecting to console so they can see their results
+function prompts2(){
+    let pay = prompt();
+}
 
+//putting data they asking for in the console
+function consolefirst(){
+    console.log(`Welcome to the initial functions of this site, ${urname}!`)
+}
 
+//1st inner interaction
+function inner1(){
+    let div = document.getElementById ("app");
+    div.innerHTML= `<h1>Welcome to a silly site, ${urname}!</h1>`;
+    document.body.appendChild(div);
+}
 
 // program to check if the number is even or odd
-const number = prompt("Enter a number: ");
-
-// ternary operator
+function evenornot(){
+    const number = prompt("Enter a number: ");
 const result = (number % 2  == 0) ? "even" : "odd";
-
-// display the result
 console.log(`The number is ${result}.`);
+}
