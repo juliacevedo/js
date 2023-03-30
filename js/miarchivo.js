@@ -10,12 +10,7 @@ if (urname !="") {
 
 //Asking for more data & firecting to console so they can see their results
 function prompts2(){
-    let pay = prompt();
-}
-
-//putting data they asking for in the console
-function consolefirst(){
-    console.log(`Welcome to the initial functions of this site, ${urname}!`)
+    let pay = Number(prompt("How much money do you have?"));
 }
 
 //1st inner interaction
@@ -23,6 +18,12 @@ function inner1(){
     let div = document.getElementById ("app");
     div.innerHTML= `<h1>Welcome to a silly site, ${urname}!</h1>`;
     document.body.appendChild(div);
+}
+
+//putting data they asking for in the console, the cicle function GOES HEREEEEEEEEE
+function consolefirst(){
+    console.log(`Welcome to the initial functions of this site, ${urname}!`);
+    
 }
 
 // program to check if the number is even or odd
