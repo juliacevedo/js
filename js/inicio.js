@@ -16,14 +16,6 @@ const promedio = ( a + b ) / 2
 const porcentaje = Promedio * 100
 
 //Button with reaction + 1st event // vamos a usar esto para hacer que vea si el numero que sale en calculadora es par o no, al principio va a pedir un numero al usuario y le va a dar resultados nomas
-function UGH () {
-    let parrafo = document.getElementById ("parrafo")
-    parrafo.innerHTML = "<h2>UGH</h2>"
-    document.body.appendChild(parrafo)
-    parrafo.addEventListener("click", Respuestaclick)    
-}
-
-UGH ()
 
 function Respuestaclick (){  
     parrafo.innerHTML = "<h3>Thank You...</h3>" 
