@@ -11,6 +11,7 @@ if (urname !="") {
 //Asking for more data & firecting to console so they can see their results
 function prompts2(){
     let pay = Number(prompt("How much money do you have?"));
+    let waste = Number(prompt("How much of that do you use? I'm asking for numbers..."));
 }
 
 //1st inner interaction
@@ -23,7 +24,7 @@ function inner1(){
 //putting data they asking for in the console, the cicle function GOES HEREEEEEEEEE
 function consolefirst(){
     console.log(`Welcome to the initial functions of this site, ${urname}!`);
-    
+
 }
 
 // program to check if the number is even or odd
