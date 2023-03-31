@@ -52,12 +52,21 @@ function consolefirst(){
 
 //we are using the for here? i think
 function goodornot(){
+    if ((total > 1000 )){
+        console.log("Well you doing better than other people... At least.")
+    }else if ((total <= 1000 )){
+        console.log("That's barely enough for buying EGGS, you doing ok there?")
+    } else if ((total = 0)){
+        console.log("Maybe think about saving more money...")
+    } else ((total < 0)){
+        console.log("YOU OK? Poverty is a thing... Not wasting more than you have sounds wise.")
+    }
     if ((total <= 1000 )){
         console.log("That's barely enough for buying EGGS, you doing ok there?")
     }else if ((0 <= total)){
         console.log("YOU OK? Poverty is a thing... Maybe think about saving more money... Or not wasting more than you have.")
     } else{
-        console.log("Well you doing better than other people... At least.")
+        console.log()
     }
     console.log("I mean you could go up to a lot more... Like")
     for (let i = 0; i <= 10; i++) {
@@ -71,5 +80,5 @@ function goodornot(){
 // program to check if the number is even or odd
 function evenornot(){
     const result = (total % 2  == 0) ? "even" : "odd";
-    console.log(`The number is ${result}. But it could be other thing. You never know. Just saying.`);
+    console.log(`The number is ${result}. But it could be not. You never know. Just saying.`);
 }
