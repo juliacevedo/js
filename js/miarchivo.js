@@ -1,28 +1,30 @@
-let urname = prompt("What's your name?") 
+//data
+let urname = prompt("What's your name?");
+let pay = Number(prompt("How much money do you have?"));
+let waste = Number(prompt("How much of that do you use? I'm asking for numbers..."));
 
+//initial if
 if (urname !="") {
     prompts2();
     inner1();
-    consolefirst();
 } else {
     alert("ERROR: The name given is not valid. Recharge the page and try again.")
 }
 
 //Asking for more data & firecting to console so they can see their results
 function prompts2(){
-    let pay = Number(prompt("How much money do you have?"));
     if ((pay !="")){
-        waste()
+        wasted()
     } else {
         alert("ERROR: The data given is not valid. Recharge the page and try again. We were asking for a number.")
     }
-} 
+}
 
 //separated this if so we don't have nested work
-function waste(){
-    let waste = Number(prompt("How much of that do you use? I'm asking for numbers..."));
+function wasted(){
     if ((waste !="")){
         alert("Neat! Do me a favor and go to Ctrl+Shift+I or go to the developer tools and then direct yourself to the console there. We already have data waiting for you!")
+        consolefirst();
     } else {
         alert("ERROR: The data given is not valid. Recharge the page and try again. We were asking for a number.")
     }  
@@ -49,9 +51,16 @@ function consolefirst(){
 //we are using the for here? i think
 function goodornot(){
     let total =  pay - waste ;
-    for (let i = 1; i <= 10; i++) {
-        let resultado = total * i ;
-        console.log(total +" X "+ i +" = "+ resultado);
+    if ((total <= 1000 )){
+        console.log("That's barely enough for buying EGGS, you doing ok there?")
+    }else {
+        console.log("I think that's enough... Maybe.")
+    }
+    for (let i = 0; i <= 10; i++) {
+        let resultado = total + i*10 ;
+        console.log("I mean you could go up to a lot more... Like")
+        console.log(total +" + "+ i*10 +" = "+ resultado);
+        console.log("But well I can't jugde you for that. I would do the same. That chocolate was really begging to be my food. I get it.")
     }    
 }
 
