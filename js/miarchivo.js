@@ -56,12 +56,12 @@ function goodornot(){
     }else {
         console.log("I think that's enough... Maybe.")
     }
+    console.log("I mean you could go up to a lot more... Like")
     for (let i = 0; i <= 10; i++) {
         let resultado = total + i*10 ;
-        console.log("I mean you could go up to a lot more... Like")
         console.log(total +" + "+ i*10 +" = "+ resultado);
-        console.log("But well I can't jugde you for that. I would do the same. That chocolate was really begging to be my food. I get it.")
     }    
+    console.log("But well I can't jugde you for that. I would do the same. That chocolate was really begging to be my food. I get it.") 
 }
 
 // program to check if the number is even or odd
