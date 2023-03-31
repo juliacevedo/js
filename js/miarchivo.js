@@ -52,15 +52,6 @@ function consolefirst(){
 
 //we are using the for here? i think
 function goodornot(){
-    if ((total < 0)){
-        console.log("YOU OK? Poverty is a thing... Not wasting more than you have sounds wise.")
-    } else if ((total = 0)){
-        console.log("Maybe think about saving more money...")
-    } else if ((total <= 1000 )){
-        console.log("That's barely enough for buying EGGS, you doing ok there?")
-    } else{
-        console.log("Well you doing better than other people... At least.")
-    }
     console.log("I mean you could go up to a lot more... Like")
     for (let i = 0; i <= 10; i++) {
         let resultado = total + i*1000 ;
