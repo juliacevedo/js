@@ -45,10 +45,9 @@ function consolefirst(){
     console.log("Soo, you put numbers for us and in a couple seconds I will tell you...");
     for (let i = 1; i <= 3; i++) {
         console.log(i);
-    } 
-    evenornot();   
+    }    
     goodornot();
-    
+    evenornot();
 }
 
 //we are using the for here? i think
@@ -59,17 +58,8 @@ function goodornot(){
         console.log("Maybe think about saving more money...")
     } else if ((total <= 1000 )){
         console.log("That's barely enough for buying EGGS, you doing ok there?")
-    } else {
+    } else{
         console.log("Well you doing better than other people... At least.")
-    }
-    if ((total > 1000 )){
-        console.log("Well you doing better than other people... At least.")
-    }else if ((total <= 1000 )){
-        console.log("That's barely enough for buying EGGS, you doing ok there?")
-    } else if ((total = 0)){
-        console.log("Maybe think about saving more money...")
-    } else ((total < 0)){
-        console.log("YOU OK? Poverty is a thing... Not wasting more than you have sounds wise.")
     }
     console.log("I mean you could go up to a lot more... Like")
     for (let i = 0; i <= 10; i++) {
