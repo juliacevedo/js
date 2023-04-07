@@ -1,8 +1,9 @@
 .maincard{
   margin: 5%;
+  margin-top: 0%;
   display:flex;
+ 
   width:90%;
-  height: 80%;
   padding: 0;
   border-radius:15px;
   font-family: sans-serif;
@@ -10,7 +11,7 @@
 }
 .title{
   width: 100%;
-  background: rgb(197, 80, 197);
+  background: rgb(25, 0, 117);
   border-radius:15px 15px 0 0 ;
   padding: 10px;
     font-size: 24px;
@@ -22,7 +23,7 @@
 }
 .cardfooter{
   width: 100%;
-  background: rgb(197, 80, 197);
+  background: rgb(25, 0, 117);
   border-radius:0 0 15px 15px;
   padding: 10px;
   text-align:center;
@@ -39,4 +40,16 @@
         content: ""
       }
   }
+}
+.card1{
+  margin: 5%;
+  margin-left: 0%;
+  padding: 5px;
+  display:flex;
+  vertical-align: middle;
+  width:90%;
+  height: 20%;
+  border-radius: 2%;
+  font-family: sans-serif;
+  background: rgb(199, 43, 43);
 }
