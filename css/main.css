@@ -454,13 +454,11 @@ table {
   margin-top: -78px; }
 
 h1 {
-  font-family: 'EB Garamond', serif;
   color: #ffb0b0;
   font: 700;
   font-size: xx-large; }
 
 h2 {
-  font-family: 'EB Garamond', serif;
   color: #fafafa;
   font: 700;
   font-size: xx-large; }
@@ -483,7 +481,6 @@ h5 {
     color: #094bff; }
 
 h6 {
-  font-family: 'EB Garamond', serif;
   color: aliceblue; }
 
 .container-fluid {
