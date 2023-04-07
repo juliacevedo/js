@@ -17,26 +17,17 @@
 	width: 70%;
 	margin-left: 0.2%;
 }
-#enviar{
-	margin-top: 2%;
-	font-family: 'Hind', sans-serif;
-	  font-weight: 700;
-	  color:rgba(0, 27, 122, 1);
-	background-color: aliceblue; 
-	border-radius: 5%;
-	border-style: hidden;
-}
 #email2{
 	width: 100%;
 }
-#enviar2{
+#enviar{
 	margin-bottom: 2%;
 	padding: 1%;
 	font-family: 'Hind', sans-serif;
 	  font-weight: 700;
-	  color:rgba(0, 27, 122, 1);
-	background-color: aliceblue; 
-	border-radius: 5%;
+	  color:rgb(255, 255, 255);
+	background-color: rgb(197, 80, 197); 
+	border-radius: 2.5%;
 	border-style: hidden;
 }
 .choose{
@@ -44,10 +35,10 @@
 	flex-direction: row;
 }
 .options{
-	margin-top: 2%;
+	margin-top: 3%;
 }
 .optionsb{
-	margin: 1%;
+	margin: 2%;
 }
 #textspace{
 	width: 100%;
