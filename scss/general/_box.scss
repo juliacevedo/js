@@ -48,39 +48,13 @@
 .margin-bottom{
 	margin-bottom: 8%;
 }
-div span{
-	margin-top: 5%;
-	margin-bottom: 2%;
-}
-span{
-	display: flex;
-		flex-direction: row;
-		vertical-align: middle;
-		align-items: center;
-		justify-content: space-around;
-}
-iframe {
-	width: 90%;
-	height: auto;
-}
-$max-img-width: 400px;
-$min-img-width: 100px;
 
-.button1{
-	padding-top: 1%;
-	padding-bottom: 1%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 2%;
-	align-self: center;
-	align-items: center;
-	display: flex;
-	padding: 1%;
-	background-color: rgb(179, 177, 202);
-	border: 1px #5a5a5a;
-	border-radius: 5%;
+.border-l{
+	border-left: rgb(197, 80, 197);
 }
-
+.border-r{
+	border-right: rgb(197, 80, 197);
+}
 @include respond-to('med'){
 	.mobile{
 		display: flex;

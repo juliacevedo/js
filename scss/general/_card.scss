@@ -3,16 +3,18 @@
   display:flex;
   width:90%;
   height: 80%;
+  padding: 0;
   border-radius:15px;
   font-family: sans-serif;
   background: rgb(255, 104, 217);
 }
 .title{
+  width: 100%;
   font-size: 24px;
   text-decoration: none;
   color: white;
   background: rgb(197, 80, 197);
-  border-radius:0 0 15px 15px;
+  border-radius:15px 15px 0 0 ;
   padding: 10px;
   text-align:center;
 }
@@ -20,6 +22,7 @@
   padding: 10px;
 }
 .cardfooter{
+  width: 100%;
   background: rgb(197, 80, 197);
   border-radius:0 0 15px 15px;
   padding: 10px;

@@ -534,34 +534,11 @@ h6 {
 .margin-bottom {
   margin-bottom: 8%; }
 
-div span {
-  margin-top: 5%;
-  margin-bottom: 2%; }
+.border-l {
+  border-left: #c550c5; }
 
-span {
-  display: flex;
-  flex-direction: row;
-  vertical-align: middle;
-  align-items: center;
-  justify-content: space-around; }
-
-iframe {
-  width: 90%;
-  height: auto; }
-
-.button1 {
-  padding-top: 1%;
-  padding-bottom: 1%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2%;
-  align-self: center;
-  align-items: center;
-  display: flex;
-  padding: 1%;
-  background-color: #b3b1ca;
-  border: 1px #5a5a5a;
-  border-radius: 5%; }
+.border-r {
+  border-right: #c550c5; }
 
 @media (max-width: (max-width: 820px)) {
   .mobile {
@@ -585,16 +562,18 @@ iframe {
   display: flex;
   width: 90%;
   height: 80%;
+  padding: 0;
   border-radius: 15px;
   font-family: sans-serif;
   background: #ff68d9; }
 
 .title {
+  width: 100%;
   font-size: 24px;
   text-decoration: none;
   color: white;
   background: #c550c5;
-  border-radius: 0 0 15px 15px;
+  border-radius: 15px 15px 0 0;
   padding: 10px;
   text-align: center; }
 
@@ -602,6 +581,7 @@ iframe {
   padding: 10px; }
 
 .cardfooter {
+  width: 100%;
   background: #c550c5;
   border-radius: 0 0 15px 15px;
   padding: 10px;
