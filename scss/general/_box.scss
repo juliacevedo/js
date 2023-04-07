@@ -48,12 +48,9 @@
 .margin-bottom{
 	margin-bottom: 8%;
 }
-
-.border-l{
-	border-left: rgb(197, 80, 197);
-}
-.border-r{
-	border-right: rgb(197, 80, 197);
+.text-center{
+	display: flex;
+	text-align: center;
 }
 @include respond-to('med'){
 	.mobile{
