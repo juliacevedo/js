@@ -580,11 +580,12 @@ iframe {
   margin: 5%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   width: 90%;
   height: 80%;
   border-radius: 15px;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  background: #ffb0b0; }
 
 .title {
   font-size: 24px;
@@ -594,7 +595,7 @@ iframe {
   padding: 10px; }
 
 .cardfooter {
-  background: #ffb0b0;
+  background: #fd99fd;
   border-radius: 0 0 15px 15px;
   padding: 10px;
   text-align: center; }
