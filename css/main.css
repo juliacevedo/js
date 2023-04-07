@@ -595,7 +595,7 @@ iframe {
   padding: 10px; }
 
 .cardfooter {
-  background: #fd99fd;
+  background: #c041c0;
   border-radius: 0 0 15px 15px;
   padding: 10px;
   text-align: center; }
@@ -772,3 +772,10 @@ nav a {
 
 #desplegable {
   width: 100%; }
+
+#logo_footer {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  margin: 0.5%;
+  margin-left: 1%; }
