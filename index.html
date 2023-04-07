@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simulator</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/x-icon" href="media/image17.png">
 </head>
 <body>
     <header id="#header" class="row-header">
@@ -17,15 +18,44 @@
         <section class="category-section"></section>
     </div>  
     <div class="maincard">
-        <div class="title column-text"><h2>Here goes the data</h2></div>
-        <div class="container-fluid row info">
+        <div class="title row-header margin-left">
+            <h2>Here goes the data</h2>
+            <img src="media/image17.png" id="logo_footer"alt="Logo page" >
+        </div>
+        <div class="container-fluid info row-md column-mb">
             <div class="col-xs-12 col-sm-16 col-md-6 col-lg-6 margin-one">
-                 
+                <form action="#" method="GET" enctype="application/x-www-form-urlencoded" class="formulario container-90">
+                    <legend><h4>Your email</h4></legend>
+                    <input type="email" id="email2" name="email"><br><br>
+                    <legend><h4>Priority scale</h4></legend>
+                    <fieldset class="choose">
+                        <div class="options">High</div>
+                        <input type="radio" name="importancia" value="high" lenght="3" class="optionsb">
+                        <div class="options">Medium</div>
+                        <input type="radio" name="importancia" value="medium" lenght="3" class="optionsb">
+                        <div class="options">Low</div>
+                        <input type="radio" name="importancia" value="low" lenght="3" class="optionsb"><br><br>
+                    </fieldset>
+                    <fieldset>
+                        <legend><h4>Why are you contacting us?</h4></legend>
+                        <select name="Reasons" id="desplegable">
+                            <option value="Choice">Select...</option>
+                            <option value="Asking for information">Asking for information</option>
+                            <option value="Sharing information">Sharing information</option>
+                            <option value="BUGS">Reporting a bug</option>
+                            <option value="Another">Another</option>
+                        </select><br><br>
+                    </fieldset>
+                    <fieldset>
+                        <legend><h4>Write down your concerns...</h4></legend>
+                        <input type="text" id="textspace" name="consulta"><br><br>
+                        <input type="submit" id="enviar2" value="Enviar">
+                    </fieldset> 
+                </form>    
             </div>
             <div class="col-xs-12 col-md-5 margin-one">
                 <div class="row-header margin-left"> 
                     <h3>Please write here your email so we can send you this information</h3>
-                    <img src="media/image17.png" id="logo_footer"alt="Logo page" >
                 </div>
                 <form action="#" method="GET" enctype="application/x-www-form-urlencoded">
                     <label for="SUBSCRIBE HERE"></label>
@@ -41,10 +71,11 @@
         </div>
     </div>
     <footer>
-        <div class="container-fluid row">
+        <div class="container-fluid row-md column-mb">
             <div class="col-xs-12 col-sm-16 col-md-6 col-lg-6 margin-one">
                 <article>
-                     <p></p>
+                     <p>We are here to help you deal with the numbers!
+                        Don't fell bad about contacting us about it, we might even answer you!</p>
                 </article>       
             </div>
             <div class="col-xs-12 col-md-5 margin-one">

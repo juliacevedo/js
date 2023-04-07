@@ -4,19 +4,11 @@ let pay = Number(prompt("How much money do you have?"));
 let waste = Number(prompt("How much of that do you use? I'm asking for numbers..."));
 let total =  pay - waste ;
 
-//initial if
+//initial if ---> had to kill inner intereaction cause it wouldnt be were i wanted it to be
 if (urname !="") {
     prompts2();
-    inner1();
 } else {
     alert("ERROR: The name given is not valid. Recharge the page and try again.")
-}
-
-//1st inner interaction
-function inner1(){
-    let div = document.getElementById ("app");
-    div.innerHTML= `<h1>Welcome to a silly site, ${urname}!</h1>`;
-    document.body.appendChild(div);
 }
 
 //Asking for more data & firecting to console so they can see their results
@@ -32,7 +24,6 @@ function prompts2(){
 function wasted(){
     if ((waste !="")){
         alert("Neat! Do me a favor and go to Ctrl+Shift+I or go to the developer tools and then direct yourself to the console there. We already have data waiting for you!")
-        inner1();
         consolefirst();
     } else {
         alert("ERROR: The data given is not valid. Recharge the page and try again. We were asking for a number.")

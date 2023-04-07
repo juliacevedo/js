@@ -1,24 +1,26 @@
 .maincard{
   margin: 5%;
   display:flex;
-  flex-direction:column;
-  justify-content:center;
   width:90%;
   height: 80%;
   border-radius:15px;
   font-family: sans-serif;
-  background: rgb(255, 176, 176);
+  background: rgb(255, 104, 217);
 }
 .title{
   font-size: 24px;
   text-decoration: none;
   color: white;
+  background: rgb(197, 80, 197);
+  border-radius:0 0 15px 15px;
+  padding: 10px;
+  text-align:center;
 }
 .info{
   padding: 10px;
 }
 .cardfooter{
-  background: rgb(192, 65, 192);
+  background: rgb(197, 80, 197);
   border-radius:0 0 15px 15px;
   padding: 10px;
   text-align:center;
