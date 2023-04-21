@@ -19,6 +19,10 @@ function formvalidation(e){
     console.log("The form was sent!");    
 }
 
+//Forms 
+let formsnr2 = document.getElementById("form2");
+formsnr.addEventListener("submit", formvalidation);
+
 //we are using the 'for' here? i think
 function goodornot(){
     console.log("I mean you could go up to a lot more... Like")
@@ -86,7 +90,7 @@ function prompts2(){
     }
 }
 
-//initial if ---> had to kill inner intereaction cause it wouldnt be were i wanted it to be
+//initial if
 if (urname !="") {
     prompts2();
 } else {
