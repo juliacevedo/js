@@ -577,6 +577,15 @@ h6 {
     align-items: center;
     justify-content: space-around; } }
 
+.indexcard {
+  margin: 5%;
+  display: flex;
+  width: 90%;
+  padding: 3%;
+  border-radius: 15px;
+  font-family: sans-serif;
+  background: #ff68d9; }
+
 .maincard {
   margin: 5%;
   margin-top: 0%;

@@ -1,3 +1,5 @@
+
+window.open(index.html)
 //data
 let urname = prompt("What's your name?");
 let pay = Number(prompt("How much money do you have?"));
