@@ -10,30 +10,39 @@ const persona1 = {
     wastes: waste ,
 }
 
-//initial if ---> had to kill inner intereaction cause it wouldnt be were i wanted it to be
-if (urname !="") {
-    prompts2();
-} else {
-    alert("ERROR: The name given is not valid. Recharge the page and try again.")
+//Forms auto reboot not allowed + getting the info out of them and saving it
+let formsnr = document.getElementById("form");
+formsnr.addEventListener("submit", formvalidation);
+
+function formvalidation(e){
+    e.preventDefault();
+    console.log("The form was sent!");    
 }
 
-//Asking for more data & firecting to console so they can see their results
-function prompts2(){
-    if ((pay !="")){
-        wasted()
+//we are using the 'for' here? i think
+function goodornot(){
+    console.log("I mean you could go up to a lot more... Like")
+    const array = [];
+    for (let i = 1; i <= 10; i++) {
+        let result = total + i*1000 ;
+        array.push(result)
+        console.log(total +" + "+ i*1000 +" = "+ result);
+    } 
+    const bigplus = array.reduce((result, total) => result + total, 0)
+    console.log("You could even go up to",bigplus,"if you were lucky enough.")
+    console.log("Not that in Argentina going up by thousands makes a big difference...")   
+    console.log("But well I can't jugde you for that. I would do the same. That chocolate was really begging to be my food. I get it. A girl needs to eat.") 
+}
+
+// program to check if the number is even or odd + change of image?? is not working currently
+function evenornotandimagechange(){
+    const result = (total % 2  == 0) ? "even" : "odd";
+    console.log(`The number is ${result}. But it could be not. You never know. Just saying.`);
+    if (result = "even"){
+        document.getElementById("changeimage").src = "media/g1195.png";
     } else {
-        alert("ERROR: The data given is not valid. Recharge the page and try again. We were asking for a number.")
+        document.getElementById("changeimage").src.replace = "media/g1073.png";
     }
-}
-
-//separated this if so we don't have nested work
-function wasted(){
-    if ((waste !="")){
-        alert("Neat! Do me a favor and go to Ctrl+Shift+I or go to the developer tools and then direct yourself to the console there. We already have data waiting for you!")
-        consolefirst();
-    } else {
-        alert("ERROR: The data given is not valid. Recharge the page and try again. We were asking for a number.")
-    }  
 }
 
 function list(d1,d2,d3){
@@ -58,24 +67,28 @@ function consolefirst(){
     evenornot();
 }
 
-//we are using the for here? i think
-function goodornot(){
-    console.log("I mean you could go up to a lot more... Like")
-    const array = [];
-    for (let i = 1; i <= 10; i++) {
-        let result = total + i*1000 ;
-        array.push(result)
-        console.log(total +" + "+ i*1000 +" = "+ result);
-    } 
-    const bigplus = array.reduce((result, total) => result + total, 0)
-    console.log("You could even go up to",bigplus,"if you were lucky enough.")
-    console.log("Not that in Argentina going up by thousands makes a big difference...")   
-    console.log("But well I can't jugde you for that. I would do the same. That chocolate was really begging to be my food. I get it. A girl needs to eat.") 
+//separated this if so we don't have nested work
+function wasted(){
+    if ((waste !="")){
+        alert("Neat! Do me a favor and go to Ctrl+Shift+I or go to the developer tools and then direct yourself to the console there. We already have data waiting for you!")
+        consolefirst();
+    } else {
+        alert("ERROR: The data given is not valid. Recharge the page and try again. We were asking for a number.")
+    }  
 }
 
+//Asking for more data & firecting to console so they can see their results
+function prompts2(){
+    if ((pay !="")){
+        wasted()
+    } else {
+        alert("ERROR: The data given is not valid. Recharge the page and try again. We were asking for a number.")
+    }
+}
 
-// program to check if the number is even or odd
-function evenornot(){
-    const result = (total % 2  == 0) ? "even" : "odd";
-    console.log(`The number is ${result}. But it could be not. You never know. Just saying.`);
+//initial if ---> had to kill inner intereaction cause it wouldnt be were i wanted it to be
+if (urname !="") {
+    prompts2();
+} else {
+    alert("ERROR: The name given is not valid. Recharge the page and try again.")
 }
