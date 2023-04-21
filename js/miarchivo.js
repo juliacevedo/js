@@ -30,7 +30,7 @@ function goodornot(){
     for (let i = 1; i <= 10; i++) {
         let result = total + i*1000 ;
         array.push(result)
-        console.log(total +" + "+ i*1000 +" = "+ result);
+        console.log(`${total} + ${i*1000} = ${result}`);
     } 
     const bigplus = array.reduce((result, total) => result + total, 0)
     console.log("You could even go up to",bigplus,"if you were lucky enough.")
@@ -39,13 +39,13 @@ function goodornot(){
 }
 
 // program to check if the number is even or odd + change of image?? is not working currently
-function evenornotandimagechange(){
-    const result = (total % 2  == 0) ? "even" : "odd";
+function evenornot(){
+    let result = (total % 2  == 0) ? "even" : "odd";
     console.log(`The number is ${result}. But it could be not. You never know. Just saying.`);
-    if (result = "even"){
+    if (result === "even"){
         document.getElementById("changeimage").src = "media/g1195.png";
     } else {
-        document.getElementById("changeimage").src.replace = "media/g1073.png";
+        document.getElementById("changeimage").src = "media/g1073.png";
     }
 }
 
@@ -56,14 +56,14 @@ function list(d1,d2,d3){
 //putting data they asking for in the console, the cicle function GOES HEREEEEEEEEE
 function consolefirst(){ 
     console.log(`Welcome to the initial functions of this site, ${urname}!`);
-    const names = [urname,"Richard","Helena","Victoria"];
+    let names = [urname,"Richard","Helena","Victoria"];
     names.splice(2,3);
     console.log( names.join(", meet "));
     console.log("That's the name this site won after I didn't know where to use arrays.");
     console.log("This is the information you gave us:");
     list(persona1.name,persona1.wins,persona1.wastes)
     console.log("Soo, you put numbers for us and in a couple seconds I will tell you...");
-    const numbers = [1,2,3];
+    let numbers = [1,2,3];
     numbers.forEach( (num)=> {
         console.log(num)
     } )       
