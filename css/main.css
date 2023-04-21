@@ -638,6 +638,18 @@ h6 {
   font-family: sans-serif;
   background: #c72b2b; }
 
+.card2 {
+  margin: 5%;
+  margin-left: 0%;
+  padding: 5px;
+  display: flex;
+  vertical-align: middle;
+  width: 90%;
+  height: 20%;
+  border-radius: 2%;
+  font-family: sans-serif;
+  background: #f2ff7e; }
+
 /* LAYOUT */
 header {
   max-height: 40px;
