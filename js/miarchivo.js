@@ -11,17 +11,17 @@ const persona1 = {
 }
 
 //Forms auto reboot not allowed + getting the info out of them and saving it
-let formsnr = document.getElementById("form");
+let formsnr = document.getElementById("form1");
 formsnr.addEventListener("submit", formvalidation);
 
 function formvalidation(e){
     e.preventDefault();
     console.log("The form was sent!");    
+    let forminfo1 = e.target
+    let payment = forminfo1.children[0].value
+    let importance = forminfo1.children[1].value
+    let note = forminfo1.children[2].value
 }
-
-//Forms 
-let formsnr2 = document.getElementById("form2");
-formsnr.addEventListener("submit", formvalidation);
 
 //we are using the 'for' here? i think
 function goodornot(){
