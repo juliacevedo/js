@@ -1,6 +1,6 @@
 //data
 let urname = prompt("What's your name?");
-let pay = Number(prompt("How much money do you have?"));
+let pay = parseFloat(prompt("How much money do you have?"));
 let waste = 0
 
 const persona1 = {
@@ -21,7 +21,7 @@ function formvalidation(e){
     e.preventDefault();
     console.log("The form was sent!");    
     let forminfo1 = e.target
-    waste = parseFloat(forminfo1.children[0].value);
+    waste = document.getElementById("email2").valueAsNumber ;
     console.log("waste:", waste);
     let wastename = forminfo1.children[1].value
     localsave("ws",waste) 
@@ -35,12 +35,22 @@ function formvalidation(e){
     driped.innerHTML = `<p>The ammount now: ${total}<p>`
 }
 
+let formfooter = document.getElementById("form2");
+formfooter.addEventListener("submit", formvalidation2);
+
+function formvalidation2(e){
+    e.preventDefault();
+    console.log("The form was sent!"); 
+    let forminfo2 = e.target
+    localsave("emailinfo",forminfo2)
+}
+
 //we are using the 'for' here? i think
 function goodornot(){
     const array = [];
     const array2 = []
     for (let i = 1; i <= 10; i++) {
-        let result = pay + i*1000 ;
+        let result = parseFloat(pay + i*1000) ;
         let interesting = (`
         ${pay} + ${i*1000} = ${result}`)
         array.push(result)
@@ -74,9 +84,8 @@ document.addEventListener('click', (event) => {
 
 // program to check if the number is even or odd + change of image?? is not working currently
 function evenornot(){
-    let result = (pay % 2  == 0) ? "even" : "odd";
-    console.log(`The number is ${result}. But it could be not. You never know. Just saying.`);
-    result === "even" ? document.getElementById("changeimage").src = "media/g1195.png": document.getElementById("changeimage").src = "media/g1073.png";
+    let result2 = (pay % 2  == 0) ? "even" : "odd";
+    result2 === "even" ? document.getElementById("changeimage").src = "media/g1195.png": document.getElementById("changeimage").src = "media/g1073.png";
 }
 
 function list(d1,d2,d3){
@@ -85,7 +94,6 @@ function list(d1,d2,d3){
 
 //putting data they asking for in the console, the cicle function GOES HEREEEEEEEEE
 function consolefirst(){ 
-    alert("Neat! Do me a favor and go to Ctrl+Shift+I or go to the developer tools and then direct yourself to the console there. We already have data waiting for you!")
     console.log(`Welcome to the initial functions of this site, ${urname}!`);
     let names = [urname,"Richard","Helena","Victoria"];
     names.splice(2,3);
@@ -94,10 +102,12 @@ function consolefirst(){
     console.log("This is the information you gave us:");
     list(persona1.name,persona1.wins,persona1.wastes)
     console.log("Soo, you put numbers for us and in a couple seconds I will tell you...");
+    console.log(Math.random() * 1)
     let numbers = [1,2,3];
     numbers.forEach( (num)=> {
         console.log(num)
-    } )          
+    } )      
+    console.log("You should really be using what you can see, and not this! But go on, I suposse?");
 }
 
 function innerfirst(){
@@ -110,7 +120,7 @@ function innerfirst(){
 
 //Asking for more data & firecting to console so they can see their results
 function prompts2(){
-    pay = isNaN() ? innerfirst() : alert("ERROR: The data given is not valid. Recharge the page and try again. We were asking for a number.")
+    pay !="" ? innerfirst() : alert("ERROR: The data given is not valid. Recharge the page and try again. We were asking for a number.")
 }
 
 //initial if
