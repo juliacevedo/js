@@ -21,13 +21,15 @@ function formvalidation(e){
     e.preventDefault();
     console.log("The form was sent!");    
     let forminfo1 = e.target
-    localsave("firstwaste",forminfo1)
-    let pname = forminfo1.children[1].value
-    let waste = forminfo1.children[0].value
+    waste = parseFloat(forminfo1.children[0].value);
+    console.log("waste:", waste);
+    let wastename = forminfo1.children[1].value
+    localsave("ws",waste) 
+    localsave("wsn",wastename)
     let total = pay - waste
     let drip = document.getElementById("card2") 
     drip.className = "card2"
-    drip.innerHTML = `<p>${pname}: ${waste}<p>`
+    drip.innerHTML = `<p>${wastename}: ${waste}<p>`
     let driped = document.getElementById("card1.2") 
     driped.className = "card1"
     driped.innerHTML = `<p>The ammount now: ${total}<p>`
@@ -36,30 +38,39 @@ function formvalidation(e){
 //we are using the 'for' here? i think
 function goodornot(){
     const array = [];
+    const array2 = []
     for (let i = 1; i <= 10; i++) {
         let result = pay + i*1000 ;
-        let interesting = (`${pay} + ${i*1000} = ${result}`)
-        array.push(interesting)
+        let interesting = (`
+        ${pay} + ${i*1000} = ${result}`)
+        array.push(result)
+        array2.push(interesting)
     } 
     const bigplus = array.reduce((result, pay) => result + pay, 0)
     let annoy = document.getElementById("card3") 
     annoy.className = "card3"
-    annoy.innerHTML = `<h5>I mean you could go up to a lot more... 
-    Like ${array} 
-    You could even go up to,${bigplus},if you were lucky enough.
-    Not that in Argentina going up by thousands makes a big difference... 
-    But well I can't jugde you for that. I would do the same. 
-    That chocolate was really begging to be my food. I get it. A girl needs to eat.<h5>`
+    annoy.innerHTML = `<h5>I mean you could go up to a lot more... </h5>
+    <h5>Like ${array2}</h5>
+    <h5> You could even go up to ${bigplus},if you were lucky enough.</h5>
+    <h5>Not that in Argentina going up by thousands makes a big difference... </h5>
+    <h5>But well I can't jugde you for that. I would do the same. </h5>
+    <h5>That chocolate was really begging to be my food. I get it. A girl needs to eat.</h5>`
+    document.body.appendChild(annoy);
 }
 
 //making popup work)?
-document.getElementById("popup").onclick = function() {card3()};
+document.getElementById("popup").onclick = function() {cardthree()};
 
-function card3() {
+function cardthree() {
   document.getElementById("card3").classList.toggle("show");
   goodornot()
 }
 
+// hide the menu when a click event occurs outside the menu
+document.addEventListener('click', (event) => {
+    if (!card3.contains(event.target) && !popup.contains(event.target)) {
+      card3.classList.add('hide');
+}});
 
 // program to check if the number is even or odd + change of image?? is not working currently
 function evenornot(){
@@ -99,7 +110,7 @@ function innerfirst(){
 
 //Asking for more data & firecting to console so they can see their results
 function prompts2(){
-    pay !="" ? innerfirst() : alert("ERROR: The data given is not valid. Recharge the page and try again. We were asking for a number.")
+    pay = isNaN() ? innerfirst() : alert("ERROR: The data given is not valid. Recharge the page and try again. We were asking for a number.")
 }
 
 //initial if

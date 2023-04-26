@@ -361,23 +361,29 @@ table {
 /* GENERAL */
 .card3 {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   vertical-align: middle;
+  content: "";
   font-family: sans-serif;
-  background: #ff68d9;
+  background: #ff4e36;
   border-radius: 15px;
-  width: 30%;
-  height: 100%;
+  width: 40%;
+  height: fit-content;
   padding: 2%;
   margin: 1%;
+  white-space: pre-line;
+  word-break: normal;
   position: absolute;
-  right: -5%;
-  top: 10%; }
+  right: 5%;
+  top: 5%; }
 
 #imgpop {
-  height: 20px;
+  height: 40px;
   position: absolute;
-  right: -5%;
-  top: 10%; }
+  z-index: 2;
+  right: 5%;
+  top: -50%; }
 
 .popup {
   position: relative;
@@ -401,8 +407,8 @@ table {
   .popup .popuptext :after {
     content: "";
     position: absolute;
-    right: -5%;
-    top: 10%;
+    right: 5%;
+    top: -50%;
     border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent; }
@@ -412,6 +418,9 @@ table {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s; }
+
+.hide {
+  display: none; }
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
