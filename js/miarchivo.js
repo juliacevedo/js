@@ -9,9 +9,17 @@ const persona1 = {
     wastes: waste ,
 }
 
-const localsave = (key, value) => { localStorage.setItem(key, value) };
+const {
+    name: id,
+    wins: money,
+    wastes: losses
+} = persona1
 
-localsave("localuser",persona1)
+const localsave = (key, value) => { localStorage.setItem(key, value) };
+const enJSON = JSON.stringify(persona1)
+const random = JSON.parse(enJSON)
+localsave("localuser",enJSON)
+const random2 = JSON.parse(localStorage.getItem("producto1"));
 
 //Forms auto reboot not allowed + getting the info out of them and saving it
 let formsnr = document.getElementById("form1");
@@ -21,8 +29,9 @@ function formvalidation(e){
     e.preventDefault();
     console.log("The form was sent!");    
     let forminfo1 = e.target
+    const input1JSON = JSON.stringify(forminfo1)
+    localsave("input1",input1JSON)
     waste = document.getElementById("email2").valueAsNumber ;
-    console.log("waste:", waste);
     let wastename = forminfo1.children[1].value
     localsave("ws",waste) 
     localsave("wsn",wastename)
@@ -42,7 +51,8 @@ function formvalidation2(e){
     e.preventDefault();
     console.log("The form was sent!"); 
     let forminfo2 = e.target
-    localsave("emailinfo",forminfo2)
+    const input2JSON = JSON.stringify(forminfo2)
+    localsave("input2",input2JSON)
 }
 
 //we are using the 'for' here? i think
@@ -68,6 +78,27 @@ function goodornot(){
     document.body.appendChild(annoy);
 }
 
+const libreria = document.getElementById("changeimage")
+
+libreria.addEventListener ("click", () =>{
+    Toastify({
+        text: `Welcome to the initial functions of this site, ${urname}!`,
+        className: "toast",
+        duration: 3000,
+        destination: "https://github.com/juliacevedo/js",
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "left", // `left`, `center` or `right`
+        offset: {
+            x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+            y: 10 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+        },
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        onClick: function(){} // Callback after click
+    }).showToast();
+})
+
 //making popup work)?
 document.getElementById("popup").onclick = function() {cardthree()};
 
@@ -92,6 +123,8 @@ function list(d1,d2,d3){
     console.log(d1,", ",d2," and ",d3)
 }
 
+
+
 //putting data they asking for in the console, the cicle function GOES HEREEEEEEEEE
 function consolefirst(){ 
     console.log(`Welcome to the initial functions of this site, ${urname}!`);
@@ -101,7 +134,9 @@ function consolefirst(){
     console.log("That's the name this site won after I didn't know where to use arrays.");
     console.log("This is the information you gave us:");
     list(persona1.name,persona1.wins,persona1.wastes)
+    console.log(enJSON)
     console.log("Soo, you put numbers for us and in a couple seconds I will tell you...");
+    console.log(random.wastes)
     console.log(Math.random() * 1)
     let numbers = [1,2,3];
     numbers.forEach( (num)=> {
