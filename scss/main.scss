@@ -6,9 +6,11 @@
 @import 'grid/mixins';
 @import 'grid/grid';
 
+/* BREAKPOINTS */
+@import 'mediaquery/breakpoints';
+
 /* GENERAL */
 @import 'general/popup';
-@import 'general/breakpoints';
 @import 'general/font';
 @import 'general/box';
 @import 'general/card';

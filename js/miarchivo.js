@@ -1,4 +1,5 @@
 //data
+
 let urname = prompt("What's your name?");
 let pay = parseFloat(prompt("How much money do you have?"));
 let waste = 0
@@ -122,8 +123,6 @@ function evenornot(){
 function list(d1,d2,d3){
     console.log(d1,", ",d2," and ",d3)
 }
-
-
 
 //putting data they asking for in the console, the cicle function GOES HEREEEEEEEEE
 function consolefirst(){ 
