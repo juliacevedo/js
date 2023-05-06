@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulator</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="sweetalert2.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
@@ -21,6 +20,22 @@
         <div id="card3"></div>
         <img id="changeimage" class="son" src="media/g1195.png" alt="img q cambia dependiendo de even or odd">
     </section>
+    <div id="loginbox" class="text-center column-text son2"> 
+        <div class="title row-header2 text-center">
+            <h2>LOGIN!</h2>
+            <img src="media/image17.png" id="logo_footer"alt="Logo page" >
+        </div>
+        <form id="login" action="#" method="GET" enctype="application/x-www-form-urlencoded" class="margin-two">
+            <legend class="margin-two"><h4>What's your name?</h4></legend>
+            <input type="text" id="textspace" name="pname"><br><br>
+            <legend><h4>How much money do you make?</h4></legend>
+            <input type="number" id="email2" name="waste"><br><br>
+        <fieldset>
+            <input href="javascript:login('hide');" type="submit" id="login" value="Enviar">
+        </fieldset>
+        <a href="javascript:login('hide');" class="closing">x</a> 
+        </form>
+    </div>
     <div class="maincard column-text">
         <div class="title row-header2 text-center">
             <h2>Well I'm counting on you!</h2>
@@ -37,7 +52,7 @@
                     <legend><h4>Add shit you have to pay here!</h4></legend>
                     <input type="number" id="email2" name="waste"><br><br>
                     <fieldset>
-                        <input type="submit" id="enviar" value="Enviar">
+                        <input type="submit" id="enviar2" value="Enviar">
                     </fieldset> 
                 </form>    
             </div>
@@ -84,7 +99,6 @@
         </div>
     </footer>
     <script type="text/javascript" src="js/miarchivo.js"></script>
-    <script src="sweetalert2.all.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>

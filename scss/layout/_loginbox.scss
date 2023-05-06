@@ -1,0 +1,15 @@
+#loginbox{
+    background-color: rgb(255, 78, 54);
+    width: 100%;
+    min-width: fit-content;
+    height: 100%;
+    z-index: 9; 
+    
+    position: fixed;
+    top: 0;
+    font-family: sans-serif; 
+}
+.closing{
+    font-family: inherit;
+        text-decoration: none;
+}
