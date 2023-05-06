@@ -1,5 +1,4 @@
 //data
-
 function login(showhide){
     if(showhide == "show"){
         document.getElementById('loginbox').style.visibility="visible";
@@ -8,27 +7,8 @@ function login(showhide){
     }
 }
 
-let urname = prompt("What's your name?");
-let pay = parseFloat(prompt("How much money do you have?"));
-let waste = 0
-
-const persona1 = {
-    name : urname ,
-    wins: pay ,
-    wastes: waste ,
-}
-
-const {
-    name: id,
-    wins: money,
-    wastes: losses
-} = persona1
-
 const localsave = (key, value) => { localStorage.setItem(key, value) };
-const enJSON = JSON.stringify(persona1)
-const random = JSON.parse(enJSON)
-localsave("localuser",enJSON)
-const random2 = JSON.parse(localStorage.getItem("producto1"));
+const sesionsave = (key, value) => { sessionStorage.setItem(key, value) };
 
 //Forms auto reboot not allowed + getting the info out of them and saving it
 let formsnr = document.getElementById("form1");
@@ -40,7 +20,7 @@ function formvalidation(e){
     let forminfo1 = e.target
     const input1JSON = JSON.stringify(forminfo1)
     localsave("input1",input1JSON)
-    waste = document.getElementById("email2").valueAsNumber ;
+    waste = document.getElementsByClassName("waste").valueAsNumber ;
     let wastename = forminfo1.children[1].value
     localsave("ws",waste) 
     localsave("wsn",wastename)
@@ -137,7 +117,9 @@ function consolefirst(){
     console.log(`Welcome to the initial functions of this site, ${urname}!`);
     let names = [urname,"Richard","Helena","Victoria"];
     names.splice(2,3);
+    const [ a, b,,] = names
     console.log( names.join(", meet "));
+    console.log(b+", meet"+a)
     console.log("That's the name this site won after I didn't know where to use arrays.");
     console.log("This is the information you gave us:");
     list(persona1.name,persona1.wins,persona1.wastes)
@@ -160,10 +142,36 @@ function innerfirst(){
     evenornot();
 }
 
-//Asking for more data & firecting to console so they can see their results
-function prompts2(){
-    pay !="" ? innerfirst() : alert("ERROR: The data given is not valid. Recharge the page and try again. We were asking for a number.")
+//START
+let logform = document.getElementById("login");
+logform.addEventListener("submit", logvalidation);
+
+async function logvalidation(e){
+    e.preventDefault();
+    localStorage.clear();
+    console.log("The form was sent!");   
+    let loginfo = document.getElementById("login").value;
+    const logJSON = JSON.stringify(loginfo)
+    localsave("log",logJSON)
+    let money = document.getElementById("email2").valueAsNumber;
+    let user = document.getElementById("textspace").value;
+    sesionsave("py",money) 
+    sesionsave("usrnm",user)
+    innerfirst()
 }
 
-//initial if
-urname !="" ? prompts2() : alert("ERROR: The name given is not valid. Recharge the page and try again.")
+var pay = sessionStorage.getItem('py')
+var urname = sessionStorage.getItem('usrnm')
+let waste = 0
+
+const persona1 = {
+    name : urname ,
+    wins: pay ,
+    wastes: waste ,
+}
+
+const enJSON = JSON.stringify(persona1)
+const random = JSON.parse(enJSON)
+localsave("localuser",enJSON)
+const random2 = JSON.parse(localStorage.getItem("producto1"));
+
