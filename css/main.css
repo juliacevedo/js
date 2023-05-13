@@ -761,9 +761,10 @@ footer {
 #loginbox {
   background-color: #ff4e36;
   width: 100%;
-  min-width: fit-content;
   height: 100%;
   z-index: 9;
+  margin: 0%;
+  padding: 0%;
   position: fixed;
   top: 0;
   font-family: sans-serif; }
@@ -771,3 +772,15 @@ footer {
 .closing {
   font-family: inherit;
   text-decoration: none; }
+
+.row-header3 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+  justify-content: flex-end;
+  padding: 0.5%;
+  background: #190075;
+  font-size: 24px;
+  color: white;
+  text-align: center; }

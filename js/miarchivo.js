@@ -96,6 +96,7 @@ function cardthree() {
   goodornot()
 }
 
+
 // hide the menu when a click event occurs outside the menu
 document.addEventListener('click', (event) => {
     if (!card3.contains(event.target) && !popup.contains(event.target)) {
@@ -159,6 +160,20 @@ async function logvalidation(e){
     sesionsave("usrnm",user)
     innerfirst()
 }
+
+//another pop up
+let help = document.getElementById("help")
+
+logform.addEventListener ("DOMContentLoaded", () =>{
+    help.innerHTML = `<h5>Hey! If you press the images(NOT THE BALL, DO NOT PRESS THE BALL) you can get interesting information!</h5>`
+    help.classList.add('show')
+
+    setTimeout(() => {
+        help.classList.add('hide')
+    }, 5000)
+})
+
+//data again
 
 var pay = sessionStorage.getItem('py')
 var urname = sessionStorage.getItem('usrnm')

@@ -81,3 +81,16 @@
 .toast{
   font-family: sans-serif;
 }
+
+#help{
+  background-color: rgb(120, 171, 247);
+  font-family: sans-serif;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  z-index: 7; 
+
+    
+  position: fixed;
+  top: 0;
+}
