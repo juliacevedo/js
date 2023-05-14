@@ -1,3 +1,19 @@
+//usamos fetch, ajax & promises q no me sirven a mi ahora y hasta entiendo q las usan para intentar ver q pasa con la info q ponen pero bno rip necesito ejemplos exactos de como se usa
+
+const url = 'https://api.github.com/users/shrutikapoor08/repos'; //la url da una lista de repositorios de github
+
+async function lol(){
+
+    fetch(url)
+    .then(response => response.json())
+    .then(reposits => { 
+    	const reposList = reposits.map(reposits => reposits.name);
+    	console.log(reposList);
+    })
+    .catch(err => console.log(err) )
+}
+lol()
+
 //data
 function login(showhide){
     if(showhide == "show"){
@@ -11,21 +27,6 @@ const localsave = (key, value) => { localStorage.setItem(key, value) };
 const sesionsave = (key, value) => { sessionStorage.setItem(key, value) };
 
 //Forms auto reboot not allowed + getting the info out of them and saving it
-
-fetch('https://jsonplaceholder.typicode.com/posts', {
-        method: 'POST',
-        body: JSON.stringify({
-            title: 'Coderhouse',
-            body: 'Post de prueba',
-            userId: 1,
-        }),
-        headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-        },
-    })
-    .then((response) => response.json())
-    .then((data) => console.log(data))
-    
 let formsnr = document.getElementById("form1");
 formsnr.addEventListener("submit", formvalidation);
 
@@ -35,11 +36,11 @@ function formvalidation(e){
     let forminfo1 = e.target
     const input1JSON = JSON.stringify(forminfo1)
     localsave("input1",input1JSON)
-    let shitty = document.getElementsByClassName("waste").valueAsNumber ;
-    let wastename = forminfo1.children[1].value
+    let wastename = forminfo1.children[1].value;
+    let shitty = document.getElementsByClassName("waste").valueAsNumber;
     localsave("ws",shitty) 
     localsave("wsn",wastename)
-    waste.push({lost: shitty, name: wastename})
+    waste.push(shitty)
     let wasted = waste.reduce((a, b) => a + b, 0);
     let total = pay - wasted
     let drip = document.getElementById("card2") 
@@ -84,6 +85,7 @@ function goodornot(){
     document.body.appendChild(annoy);
 }
 
+//imagen q cambia
 const libreria = document.getElementById("changeimage")
 
 libreria.addEventListener ("click", () =>{
@@ -163,9 +165,8 @@ function innerfirst(){
 
 //data again
 let urname = prompt("Hey! What's your name?")
-let pay = prompt("How much money do you make?")
-let waste = [{lost:0 , name: "bithc"}]
-
+let pay = Number(prompt("How much money do you make?"))
+let waste = [0,]
 
 const persona1 = {
     name : urname ,
