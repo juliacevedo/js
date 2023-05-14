@@ -14,29 +14,16 @@
             <label for="menu" id><img src="media/image17.png" id="LOGO"></label>
         </a>  
     </header>
-    <div id="help"></div>
+    <div id="help">
+        <p>Hey! If you press the pictures you might get some more info!</p>
+        <a href="javascript:login('hide');" class="closing">X</a> 
+    </div>
     <section class="container-fluid column-text relative_position">
         <div class="father"><p> </p></div>
         <button id="popup" onclick=""><img src="media/image308.png" id="imgpop"></button>
         <div id="card3"></div>
         <img id="changeimage" class="son" src="media/g1195.png" alt="img q cambia dependiendo de even or odd">
     </section>
-    <div id="loginbox" class="text-center column-text"> 
-        <div class="row-header3">
-            <h2>LOGIN!</h2>
-            <img src="media/image17.png" id="logo_footer"alt="Logo page" >
-        </div>
-        <form id="login" action="#" method="GET" enctype="application/x-www-form-urlencoded" class="margin-two">
-            <legend class="margin-two"><h4>What's your name?</h4></legend>
-            <input type="text" id="textspace" name="username" required><br><br>
-            <legend><h4>How much money do you make?</h4></legend>
-            <input type="number" id="email2" name="pay" required><br><br>
-        <fieldset>
-            <input href="javascript:login('hide');" type="submit" id="enviar2" value="Send">
-        </fieldset>
-        <a href="javascript:login('hide');" class="closing">Close</a> 
-        </form>
-    </div>
     <div class="maincard column-text">
         <div class="title row-header2 text-center">
             <h2>Well I'm counting on you!</h2>
@@ -44,7 +31,7 @@
         </div>
         <div class="container-fluid info row-md column-mb">
             <div class="col-xs-12 col-sm-16 col-md-6 col-lg-6 margin-two">
-                <form id="form1" action="#" method="GET" enctype="application/x-www-form-urlencoded" class="container-90">
+                <form id="form1" action="#" method="PUT" enctype="application/x-www-form-urlencoded" class="container-90">
                     <div class="margin-bottom"> 
                         <h3>You can write what you have to pay here!</h3>
                     </div>
@@ -87,7 +74,7 @@
                 <h3>SUBSCRIBE HERE</h3>
                 <img src="media/image17.png" id="logo_footer"alt="Logo page" >
             </div>
-            <form id="form2" action="#" method="GET" enctype="application/x-www-form-urlencoded">
+            <form id="form2" action="#" method="POST" enctype="application/x-www-form-urlencoded">
                  <label for="SUBSCRIBE HERE"></label>
                 <input type="email" id="email" name="email" required><br></br>
                 <label for="WANT TO RECEIVE ADD">Disagree to receive advertisements from this site</label>

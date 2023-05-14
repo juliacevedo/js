@@ -1,9 +1,9 @@
 //data
 function login(showhide){
     if(showhide == "show"){
-        document.getElementById('loginbox').style.visibility="visible";
+        document.getElementById('help').style.visibility="visible";
     }else if(showhide == "hide"){
-        document.getElementById('loginbox').style.visibility="hidden"; 
+        document.getElementById('help').style.visibility="hidden"; 
     }
 }
 
@@ -11,6 +11,21 @@ const localsave = (key, value) => { localStorage.setItem(key, value) };
 const sesionsave = (key, value) => { sessionStorage.setItem(key, value) };
 
 //Forms auto reboot not allowed + getting the info out of them and saving it
+
+fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: JSON.stringify({
+            title: 'Coderhouse',
+            body: 'Post de prueba',
+            userId: 1,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    
 let formsnr = document.getElementById("form1");
 formsnr.addEventListener("submit", formvalidation);
 
@@ -20,14 +35,16 @@ function formvalidation(e){
     let forminfo1 = e.target
     const input1JSON = JSON.stringify(forminfo1)
     localsave("input1",input1JSON)
-    waste = document.getElementsByClassName("waste").valueAsNumber ;
+    let shitty = document.getElementsByClassName("waste").valueAsNumber ;
     let wastename = forminfo1.children[1].value
-    localsave("ws",waste) 
+    localsave("ws",shitty) 
     localsave("wsn",wastename)
-    let total = pay - waste
+    waste.push({lost: shitty, name: wastename})
+    let wasted = waste.reduce((a, b) => a + b, 0);
+    let total = pay - wasted
     let drip = document.getElementById("card2") 
     drip.className = "card2"
-    drip.innerHTML = `<p>${wastename}: ${waste}<p>`
+    drip.innerHTML = `<p>${wastename}: ${shitty}<p>`
     let driped = document.getElementById("card1.2") 
     driped.className = "card1"
     driped.innerHTML = `<p>The ammount now: ${total}<p>`
@@ -126,7 +143,7 @@ function consolefirst(){
     list(persona1.name,persona1.wins,persona1.wastes)
     console.log(enJSON)
     console.log("Soo, you put numbers for us and in a couple seconds I will tell you...");
-    console.log(random.wastes)
+    console.log(0)
     console.log(Math.random() * 1)
     let numbers = [1,2,3];
     numbers.forEach( (num)=> {
@@ -143,41 +160,12 @@ function innerfirst(){
     evenornot();
 }
 
-//START
-let logform = document.getElementById("login");
-logform.addEventListener("submit", logvalidation);
-
-async function logvalidation(e){
-    e.preventDefault();
-    localStorage.clear();
-    console.log("The form was sent!");   
-    let loginfo = document.getElementById("login").value;
-    const logJSON = JSON.stringify(loginfo)
-    localsave("log",logJSON)
-    let money = document.getElementById("email2").valueAsNumber;
-    let user = document.getElementById("textspace").value;
-    sesionsave("py",money) 
-    sesionsave("usrnm",user)
-    innerfirst()
-}
-
-//another pop up
-let help = document.getElementById("help")
-
-logform.addEventListener ("DOMContentLoaded", () =>{
-    help.innerHTML = `<h5>Hey! If you press the images(NOT THE BALL, DO NOT PRESS THE BALL) you can get interesting information!</h5>`
-    help.classList.add('show')
-
-    setTimeout(() => {
-        help.classList.add('hide')
-    }, 5000)
-})
 
 //data again
+let urname = prompt("Hey! What's your name?")
+let pay = prompt("How much money do you make?")
+let waste = [{lost:0 , name: "bithc"}]
 
-var pay = sessionStorage.getItem('py')
-var urname = sessionStorage.getItem('usrnm')
-let waste = 0
 
 const persona1 = {
     name : urname ,
@@ -190,3 +178,4 @@ const random = JSON.parse(enJSON)
 localsave("localuser",enJSON)
 const random2 = JSON.parse(localStorage.getItem("producto1"));
 
+innerfirst();
